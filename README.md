@@ -1,13 +1,15 @@
 #Quick start 
 ## How to run the analysis
-1. To run the analysis, set the working folder as follows:
+
+1. If the "root" or uppermost folder is different on your computer, change the working folder AND the value of the *fldProjectroot* variable in the *run_analysis.R* file.
+
+2. To run the analysis, set the working folder as follows:
 
 		setwd("C:\\Users\\nick\\Documents\\Coursera\\DS03 Getting & cleaning data\\DS03GetCleanDataGit")
-2. Then,
+3. Then,
 
 		source("run_analysis.R")
 
-3. If the "root" or uppermost folder is different on your computer, change the working folder AND the value of the *fldProjectroot* variable in the *run_analysis.R* file.
 
 ## How to read the tidy data
 See the "optional code" section at the bottom of the *run_analysis.R* file.
