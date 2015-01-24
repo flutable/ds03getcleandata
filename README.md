@@ -1,4 +1,4 @@
-#Quick start
+#Quick start 
 ## How to run the analysis
 1. To run the analysis, set the working folder as follows:
 
