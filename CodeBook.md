@@ -1,11 +1,10 @@
 #Codebook 
-
 This description borrows heavily from the "features_info.txt" file in the original UCI HAR dataset.
 
 The variables in the "tidy" dataset represent the mean value of each variable type described below.
 The mean value is the mean of the "mean" and "standard deviation" columns extracted from the original dataset.
 
-
+##Derivation of original dataset
 The original dataset (ie not this tidy dataset) values were obtained from:
 
 1. Accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise.
@@ -21,39 +20,47 @@ The original dataset (ie not this tidy dataset) values were obtained from:
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+		tBodyAcc-XYZ
+		tGravityAcc-XYZ
+		tBodyAccJerk-XYZ
+		tBodyGyro-XYZ
+		tBodyGyroJerk-XYZ
+		tBodyAccMag
+		tGravityAccMag
+		tBodyAccJerkMag
+		tBodyGyroMag
+		tBodyGyroJerkMag
+		fBodyAcc-XYZ
+		fBodyAccJerk-XYZ
+		fBodyGyro-XYZ
+		fBodyAccMag
+		fBodyAccJerkMag
+		fBodyGyroMag
+		fBodyGyroJerkMag
 
-The set of variables that were estimated from these signals and present in the tidy dataset are: 
+Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
+
+		gravityMean
+		tBodyAccMean
+		tBodyAccJerkMean
+		tBodyGyroMean
+		tBodyGyroJerkMean
+
+A subset  of variables that were estimated from these signals and present in the tidy dataset are: 
 
 mean: Mean value
 std: Standard deviation
 
-Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
+#The tidy dataset
+Note that the tidy dataset contains the means of the original dataset's mean and standard deviation values.
 
-gravityMean
-tBodyAccMean
-tBodyAccJerkMean
-tBodyGyroMean
-tBodyGyroJerkMean
-	
-#Variables
-#Variables
+##Tidy dataset format
+File format: comma separated variable. Each variable name and value is separated by a comma. 
+Row 1: Variable names. Each variable name is enclosed in ASCII double quotes.
+Rows 2 onwards: observations
+
+##Variables
+
 Where variables represent one ordinate of an X-Y-Z triple, only the X variable is described in the table below.
 Where "gravity" is mentioned, this is the vector due to gravity. 
 
