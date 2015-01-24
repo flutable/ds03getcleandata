@@ -140,15 +140,15 @@ FrequencyBodyGyroscopeMeanFrequencyZ | numeric | As above, in Z direction.
 FrequencyBodyAccelerometerMagnitudeMean | numeric | Mean of mean of frequency-domain value of accelerometer magnitude (this being calculated via Euclidean norm)
 FrequencyBodyAccelerometerMagnitudeStandarddeviation | numeric |  Mean of mean of frequency-domain value of accelerometer standard deviation (this being calculated via Euclidean norm)
 FrequencyBodyAccelerometerMagnitudeMeanFrequency | numeric | Mean of mean of frequency-domain value of accelerometer frequency
-FrequencyBodyBodyAccelerometerJerkMagnitudeMean | numeric | Mean of mean frequency-domain value of accelerometer jerk  magnitude 
-FrequencyBodyBodyAccelerometerJerkMagnitudeStandarddeviation | numeric | Mean of mean frequency-domain value of accelerometer jerk standard deviation
-FrequencyBodyBodyAccelerometerJerkMagnitudeMeanFrequency | numeric | Mean of mean frequency-domain value of accelerometer jerk magnitude frequency
-FrequencyBodyBodyGyroscopeMagnitudeMean | numeric | Mean of mean frequency-domain value of gyroscope magnitude 
-FrequencyBodyBodyGyroscopeMagnitudeStandarddeviation | numeric |  Mean of mean frequency-domain value of gyroscope standard deviation
-FrequencyBodyBodyGyroscopeMagnitudeMeanFrequency | numeric | Mean of mean frequency-domain value of gyroscope mean frequency magnitude 
-FrequencyBodyBodyGyroscopeJerkMagnitudeMean | numeric |  Mean of mean frequency-domain value of gyroscope jerk magnitude 
-FrequencyBodyBodyGyroscopeJerkMagnitudeStandarddeviation | numeric | Mean of mean frequency-domain value of gyroscope jerk magnitude standard deviation
-FrequencyBodyBodyGyroscopeJerkMagnitudeMeanFrequency | numeric | Mean of mean frequency-domain value of gyroscope jerk magnitude mean frequency
+FrequencyBodyAccelerometerJerkMagnitudeMean | numeric | Mean of mean frequency-domain value of accelerometer jerk  magnitude 
+FrequencyBodyAccelerometerJerkMagnitudeStandarddeviation | numeric | Mean of mean frequency-domain value of accelerometer jerk standard deviation
+FrequencyBodyAccelerometerJerkMagnitudeMeanFrequency | numeric | Mean of mean frequency-domain value of accelerometer jerk magnitude frequency
+FrequencyBodyGyroscopeMagnitudeMean | numeric | Mean of mean frequency-domain value of gyroscope magnitude 
+FrequencyBodyGyroscopeMagnitudeStandarddeviation | numeric |  Mean of mean frequency-domain value of gyroscope standard deviation
+FrequencyBodyGyroscopeMagnitudeMeanFrequency | numeric | Mean of mean frequency-domain value of gyroscope mean frequency magnitude 
+FrequencyBodyGyroscopeJerkMagnitudeMean | numeric |  Mean of mean frequency-domain value of gyroscope jerk magnitude 
+FrequencyBodyGyroscopeJerkMagnitudeStandarddeviation | numeric | Mean of mean frequency-domain value of gyroscope jerk magnitude standard deviation
+FrequencyBodyGyroscopeJerkMagnitudeMeanFrequency | numeric | Mean of mean frequency-domain value of gyroscope jerk magnitude mean frequency
 AngleTimeBodyAccelerometerMeanGravitY | numeric | Mean of angle between body acceleration and gravity, obtained by averaging in a signal window.
 AngleTimeBodyAccelerometerJerkMeanGravityMean | numeric | Mean of angle between body "jerk"  and gravity, obtained by averaging in a signal window.
 AngleTimeBodyGyroscopeMeanGravityMean | numeric | Mean of angle bewtwen body "mean" gyroscope value and gravity, obtained by averaging in a signal window.  

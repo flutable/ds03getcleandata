@@ -110,6 +110,7 @@ descriptivenames <- gsub("mean",    "Mean",             descriptivenames, perl=T
 descriptivenames <- gsub("jerk",    "Jerk",             descriptivenames, perl=TRUE, ignore.case=FALSE)
 descriptivenames <- gsub("body",    "Body",             descriptivenames, perl=TRUE, ignore.case=FALSE)
 descriptivenames <- gsub("gravity", "Gravity",          descriptivenames, perl=TRUE, ignore.case=FALSE)
+descriptivenames <- gsub("BodyBody","Body",             descriptivenames, perl=TRUE, ignore.case=FALSE)  #fixes a mistake in the original names.
 
 #freq([x-z])\\z
 #  Match the character string “freq” literally (case insensitive)
