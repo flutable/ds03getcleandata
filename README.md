@@ -58,6 +58,8 @@ The output file, "tidydata.txt" is tidy as per the following principles:
 - the tidydata.txt file contains one kind of observation (spatial movement during various activities)
 - variable names are descriptive, not duplicated, and contain only alphanumeric characters
 - variable names are long, and therefore are capitalised using [CamelCase](http://en.wikipedia.org/wiki/CamelCase "CamelCase") in order to make them more readable.
+ 
+The data are grouped by the subject, then the activity (in other words, subject iterates from 1 to 30, while activity iterates within each subject from "walking" to "laying". The dataset is therefore "wide", as activity repeats for each subject.
 
 #Optional code
 This section of the *run_analysis.R* file shows
