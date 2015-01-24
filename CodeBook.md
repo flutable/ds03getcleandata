@@ -48,16 +48,17 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 
 A subset  of variables that were estimated from these signals and present in the tidy dataset are: 
 
-mean: Mean value
-std: Standard deviation
+**mean** Mean value
+**std**  Standard deviation
 
 #The tidy dataset
 Note that the tidy dataset contains the means of the original dataset's mean and standard deviation values.
 
 ##Tidy dataset format
-File format: comma separated variable. Each variable name and value is separated by a comma. 
-Row 1: Variable names. Each variable name is enclosed in ASCII double quotes.
-Rows 2 onwards: observations
+
+**File format**	comma separated variable. Each variable name and value is separated by a comma. 
+**Row 1**	Variable names. Each variable name is enclosed in ASCII double quotes.
+**Rows 2 onwards** observations
 
 ##Variables
 
