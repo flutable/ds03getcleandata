@@ -12,9 +12,6 @@ fldDataset     <- paste0(fldProjectroot, "\\UCI HAR Dataset")
 fldTestdata    <- paste0(fldProjectroot, "\\UCI HAR Dataset\\test")
 fldTraindata   <- paste0(fldProjectroot, "\\UCI HAR Dataset\\train")
 
-# Set up project and destination folders
-#setwd(fldProjectroot)
-
  message("Reading test data...")
  testx <- read.table(paste0(fldTestdata,"\\X_test.txt"))
  testy <- read.table(paste0(fldTestdata,"\\Y_test.txt"))
