@@ -34,20 +34,19 @@ The original data were provided as follows (from original dataset)
 - 'test/y_test.txt': Test labels.
 
 #Processing
-As per the original dataset README.txt, the dataset was originally partitioned into training and test data, so there is
-no procedural reason against merging the data. The data were processed as follows:
+As per the original dataset README.txt, the dataset was originally partitioned into training and test data, so there is no procedural reason against merging the data. The data were processed as follows:
 
-1  Read test x/y, training x/y, and subject test/train files
+1. Read test x/y, training x/y, and subject test/train files
 2. Convert test x/y activity codes into meaningful activity names, eg '1' changed to 'walking', '2' to 'walkingupstairs', etc
 3. Add the test/train activity names and test/train subject ID columns to the test and training data respectively
-4. append the test data to the training date, thereby merging the datasets
+4. Append the test data to the training date, thereby merging the datasets
 5. Reading the feature names and performing text processing to clean up the feature names as follows:
-  * removing the characters - ( ) " , . and adding the meaningful column names "Activity" and "Subject"
-  * renaming the columns of the combined data
+* removing the characters - ( ) "   , . and adding the meaningful column names "Activity" and "Subject" 
+* renaming the columns of the combined data
 6. From the combined data, extract columns of interest, defined as any column with the strings "mean" or "std" in the name.
 7. Transform the names of the columns of interest to "meaningful" names using further text processing as follows:
-  * changing capitalisation to "CamelCase" to make reading the variable names easier
-  * capitalising ordinate names (x to X, y to Y, Z to Z) to make reading easier
+* changing capitalisation to "CamelCase" to make reading the variable names easier
+* capitalising ordinate names (x to X, y to Y, Z to Z) to make reading easier
 8. Grouping the data by activity, then subject, then taking the means of the grouped data
 9. Saving the data to a file, "tidydata.txt"
 ##Optional code
