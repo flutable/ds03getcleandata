@@ -25,7 +25,7 @@ The original folder hierarchy, extracted from *getdata_projectfiles_UCI HAR Data
 	   
  
 ##Original data 
-The original data were provided as follows (from original dataset)
+The original data were provided as follows (from the original dataset)
 
 - 'features_info.txt': Shows information about the variables used on the feature vector.
 - 'features.txt': List of all features.
