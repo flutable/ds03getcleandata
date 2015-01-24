@@ -41,7 +41,7 @@ testyactnames <- mutate(testyactnames, activitynum=ifelse(activitynum==6, "layin
 
 message("adding activity labels to training data")
 names(trainy) <- "activitynum" 
-trainyactnames <- mutate(trainy, 		 activitynum=ifelse(activitynum==1, "walking",activitynum))
+trainyactnames <- mutate(trainy,         activitynum=ifelse(activitynum==1, "walking",activitynum))
 trainyactnames <- mutate(trainyactnames, activitynum=ifelse(activitynum==2, "walkingupstairs",activitynum))
 trainyactnames <- mutate(trainyactnames, activitynum=ifelse(activitynum==3, "walkingdownstairs",activitynum))
 trainyactnames <- mutate(trainyactnames, activitynum=ifelse(activitynum==4, "sitting",activitynum))
