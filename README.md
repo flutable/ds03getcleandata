@@ -29,8 +29,20 @@
 # [ ] Create codebook CodeBook.md describing variables, data, any transformations required for cleanup.
 # [ ] README.md describing github layout.
 ^^^^^^^remove above.
+#Quick start
+##How to run the analysis
+1. To run the analysis, set the working folder as follows:
+
+setwd("C:\\Users\\nick\\Documents\\Coursera\\DS03 Getting & cleaning data\\DS03GetCleanDataGit")
+2. Then, source("run_analysis.R")
+
+3. If the "root" or uppermost folder is different on your computer, change the working folder AND the value of the fldProjectroot"
+variable in the run_analysis.R file.
+##How to read the tidy data
+See the "optional code" section at the bottom of the *run_analysis.R* file.
+
 #Source/original/Raw data
-# Original data folder hierarchy	folder variables
+## Original data folder hierarchy	folder variables
 project								fldProjectroot
  UCI HAR Dataset					fldDataroot
     test							fldTestdata
@@ -39,7 +51,8 @@ project								fldProjectroot
        Inertial signals
 	   
  
-Original data provided as follows (from original 
+##Original data 
+The original data were provided as follows (from original dataset)
 #
 #- 'features_info.txt': Shows information about the variables used on the feature vector.
 #- 'features.txt': List of all features.
@@ -49,16 +62,18 @@ Original data provided as follows (from original
 #- 'test/X_test.txt': Test set.
 #- 'test/y_test.txt': Test labels.
 
-# The following files are available for the train and test data. Their descriptions are equivalent. 
-#- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
-Processing
-1. Dimensions of datasets:
-train/X_train.txt'      : 7352rows x 561 cols.
-train/y_train.txt'      : 7352 x 1
-train/subject_train.txt : 7352 x 1
-test/X_test.txt'        : 2947 x 561
-test/y_test.txt'        : 2947 x 1
-test/subject_test.txt   : 2947 x 1
-2. Merge as follows:
+#Processing
 As per the original dataset README.txt, the dataset was originally partitioned into training and test data, so there is
-no procedural reason against merging the data.
+no procedural reason against merging the data. The data were processed as follows:
+1. Read test x/y, training x/y, and subject test/train files
+2. Convert test x/y activity codes into meaningful activity names, eg '1' changed to 'walking', '2' to 'walkingupstairs', etc
+3. Add the test/train activity names and test/train subject ID columns to the test and training data respectively
+4. append the test data to the training date, thereby merging the datasets
+5. Reading the feature names and performing text processing to clean up the feature names as follows:
+  * removing the characters - ( ) " , . and adding the meaningful column names "Activity" and "Subject"
+  * renaming the columns of the combined data
+6. From the combined data, extract columns of interest, defined as any column with the strings "mean" or "std" in the name.
+7. Transform the names of the columns of interest to "meaningful" names using further text processing as follows:
+  * changing capitalisation to "CamelCase" to make reading the variable names easier
+  * capitalising ordinate names (x to X, y to Y, Z to Z) to make reading easier
+8 Grouping the data by activity, then subject, then 

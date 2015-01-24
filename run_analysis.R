@@ -14,9 +14,7 @@ fldTraindata   <- paste0(fldProjectroot, "\\UCI HAR Dataset\\train")
 
 # Set up project and destination folders
 #setwd(fldProjectroot)
-if (!file.exists(fldTidydata)) {
-   dir.create(fldTidydata)
-}
+
  message("Reading test data...")
  testx <- read.table(paste0(fldTestdata,"\\X_test.txt"))
  testy <- read.table(paste0(fldTestdata,"\\Y_test.txt"))
@@ -150,8 +148,9 @@ labelleddata <- tbl_df(meanstddata)
 #group the data, summarize each column
 labelleddata %>% group_by(Activity, Subject) %>% summarise_each(funs(mean))
 
+#save data
 datafile <- file("tidydata.txt","w")
-write.table(labelleddata,file=datafile,row.names=FALSE)
+write.table(labelleddata,file=datafile,sep=",",row.names=FALSE)
 close(datafile)
 
 # Optional code
@@ -160,8 +159,11 @@ close(datafile)
 #> writeLines(descriptivenames, desc)
 #> close(desc)
 
-#2. Read the tidy data 
-
+#2. How to read the tidy data 
+#  2.1 Read the file, ignore factors, convert to dplyr-compatible data frame
+#  tidyd <- tbl_df(read.csv("tidydata.txt",header=TRUE,stringsAsFactors =FALSE))
+#  test against existing data
+#  identical(tidyd,labelleddata)
 #End of file
 
 
