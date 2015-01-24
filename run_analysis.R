@@ -7,7 +7,7 @@ rm(list=ls())
 
 # Set up handles to folders
 # **If these folders are different on your system, edit the variables below**
-fldProjectroot <- "C:\\Users\\nick\\Documents\\Coursera\\DS03 Getting & cleaning data\\DS03GetCleanDataGit"
+fldProjectroot <- ".\\" #"C:\\Users\\nick\\Documents\\Coursera\\DS03 Getting & cleaning data\\DS03GetCleanDataGit"
 fldDataset     <- paste0(fldProjectroot, "\\UCI HAR Dataset")
 fldTestdata    <- paste0(fldProjectroot, "\\UCI HAR Dataset\\test")
 fldTraindata   <- paste0(fldProjectroot, "\\UCI HAR Dataset\\train")
@@ -145,12 +145,13 @@ names(meanstddata) <- descriptivenames
 # create a dplyr data frame table (I think dplyr does this by default, but....making sure.
 labelleddata <- tbl_df(meanstddata)
 #group the data, summarize each column
-labelleddata %>% group_by(Activity, Subject) %>% summarise_each(funs(mean))
+summariseddata <- labelleddata %>% group_by(Activity, Subject) %>% summarise_each(funs(mean))
 
 #save data
 datafile <- file("tidydata.txt","w")
-write.table(labelleddata,file=datafile,sep=",",row.names=FALSE)
+write.table(summariseddata,file=datafile,sep=",",row.names=FALSE)
 close(datafile)
+
 
 # Optional code
 # 1. Write the descriptive names to a file
