@@ -20,7 +20,6 @@ fldTraindata   <- paste0(fldProjectroot, "\\UCI HAR Dataset\\train")
  trainx <- read.table(paste0(fldTraindata,"\\X_train.txt"))
  trainy <- read.table(paste0(fldTraindata,"\\Y_train.txt"))
  subjecttrain <- read.table(paste0(fldTraindata,"\\subject_train.txt"))
-
  
 #add activity labels 
 # 1 WALKING
@@ -33,7 +32,7 @@ fldTraindata   <- paste0(fldProjectroot, "\\UCI HAR Dataset\\train")
 message("adding activity labels to test data")
 names(testy) <- "activitynum" # so we know for sure what the variable is called. defaults to V1
 #"conditional mutate": replace if match, else leave as previous value. 
-testyactnames <- mutate(testy, 		   activitynum=ifelse(activitynum==1, "walking",activitynum))           
+testyactnames <- mutate(testy,         activitynum=ifelse(activitynum==1, "walking",activitynum))           
 testyactnames <- mutate(testyactnames, activitynum=ifelse(activitynum==2, "walkingupstairs",activitynum))
 testyactnames <- mutate(testyactnames, activitynum=ifelse(activitynum==3, "walkingdownstairs",activitynum))
 testyactnames <- mutate(testyactnames, activitynum=ifelse(activitynum==4, "sitting",activitynum))
@@ -50,13 +49,14 @@ trainyactnames <- mutate(trainyactnames, activitynum=ifelse(activitynum==5, "sta
 trainyactnames <- mutate(trainyactnames, activitynum=ifelse(activitynum==6, "laying",activitynum)) 
  
 #Add subject & activity label columns
-# format is now 561 obs + activity + subject, so activities are in col 562 and subject is in col 563
+# format is now 561 observations + activity + subject, so activities are in col 562 and subject is in col 563
 testx2  <- cbind(testx,testyactnames,subjecttest)
 trainx2 <- cbind(trainx,trainyactnames,subjecttrain)
 
 # PART 1 of project requirement.
 #Append test dataset to the end of training dataset
 combined <- rbind(trainx2,testx2)
+
 
 #Get feature names
  message("reading feature labels")
@@ -79,7 +79,7 @@ allfeatures <- c(cleanfeatures, "Activity", "Subject")
 #  3. rename all columns in combined datasets
 names(combined) <- allfeatures
 
-#remove previous variables to save memory
+#remove previous variables to save memory if necessary
 #rm(testx);rem(testy);rm(subjecttest);rm(subjecttrain);rm(testyactnames);rm(trainyactnames);rm(testx2);rm(trainx2)
 
 #Extract all the measurements dealing with mean and standard deviation
@@ -89,7 +89,7 @@ names(combined) <- allfeatures
 meanstdcolumns <- grepl("mean|std|activity|subject", allfeatures, perl=TRUE, ignore.case=TRUE);
 
 # PART 2 of project requirement
-# 5 create a new dataset with just the "mean" and "standard deviation" columns
+# 5 create a new dataset with just the "mean" and "standard deviation" columns (and subject & activity)
 meanstddata <- combined[ ,meanstdcolumns]
 
 # 6 extract the names
@@ -122,6 +122,7 @@ descriptivenames <- gsub("gravity", "Gravity",          descriptivenames, perl=T
 descriptivenames <- gsub("freq([x-z])\\z", "Frequency\\1", descriptivenames, perl=TRUE, ignore.case=TRUE)
 
 # find x,y,z at the end of a string, convert back to uppercase, as they are coordinates.
+#   the \\U converts to uppercase, the \\1 is the back reference to the found text, and \\E stops converting to uppercase
 descriptivenames <- gsub("([x-z])\\z", "\\U\\1\\E", descriptivenames, perl=TRUE, ignore.case=TRUE)
 
 # find angle[x-z], convert to Angle[X-Z]
@@ -135,10 +136,11 @@ descriptivenames <- gsub("subject", "Subject", descriptivenames, perl=TRUE, igno
 descriptivenames <- gsub("activity", "Activity", descriptivenames, perl=TRUE, ignore.case=TRUE)
 
 #PART 4 of the project requirement
+#rename the combined mean & standard deviation data with descriptive names
 names(meanstddata) <- descriptivenames
 
 #PART 5
-
+# Create & save the now-tidied dataset.
 #order by activity, then subject
 # create a dplyr data frame table (I think dplyr does this by default, but....making sure.
 labelleddata <- tbl_df(meanstddata)
@@ -152,16 +154,13 @@ close(datafile)
 
 # Optional code
 # 1. Write the descriptive names to a file
-# desc <- file("descriptivenames.txt","w")
-#> writeLines(descriptivenames, desc)
-#> close(desc)
+#   desc <- file("descriptivenames.txt","w")
+#   writeLines(descriptivenames, desc)
+#   close(desc)
 
 #2. How to read the tidy data 
-#  2.1 Read the file, ignore factors, convert to dplyr-compatible data frame
-#  tidyd <- tbl_df(read.csv("tidydata.txt",header=TRUE,stringsAsFactors =FALSE))
-#  test against existing data
-#  identical(tidyd,labelleddata)
+#   Read the file, ignore factors, convert to dplyr-compatible data frame
+#    tidyd <- tbl_df(read.csv("tidydata.txt",header=TRUE,stringsAsFactors =FALSE))
+#    test against existing data
+#    identical(tidyd,labelleddata)   #should be TRUE
 #End of file
-
-
-
