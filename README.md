@@ -45,12 +45,13 @@ As per the original dataset README.txt, the dataset was originally arbitrarily p
 
 1. Read test x/y, training x/y, and subject test/train files.
 2. Convert test x/y activity codes into meaningful activity names, eg '1' changed to 'walking', '2' to 'walkingupstairs', etc.
-3. Add the test/train activity names and test/train subject ID columns to the test and training data frames respectively.
+3. Add the test/train activity name and test/train subject ID columns to the test and training data frames respectively.
 4. Append the test data to the training date, thereby merging the datasets.
-5. Reading the feature names and performing text processing to clean up the feature names as follows:
+5. Reading the feature names  from "features.txt" and performing text processing to clean up the feature names as follows:
 * removing the characters `- ( ) "   , .` and adding the meaningful column names "Activity" and "Subject" 
 * renaming the columns of the combined data
-6. From the combined data, extract columns of interest, defined as any column with the strings "mean" or "std" in the name.
+6. From the combined data, create a new dataset ("meanstddata") by extract only the columns of interest, defined as any column with the strings "mean" or "std" (and "subject"/"activity") in the name. All other columns
+are discarded.
 7. Transform the names of the columns of interest to "meaningful" names using further text processing as follows:
 * changing capitalisation to "CamelCase" to make reading the variable names easier
 * capitalising ordinate names (x to X, y to Y, Z to Z) to make reading easier

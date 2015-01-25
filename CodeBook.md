@@ -68,96 +68,97 @@ Note that the tidy dataset contains the means of the original dataset's mean and
 Where variables represent one ordinate of an X-Y-Z triple, only the X variable is described in the table below.
 Where "gravity" is mentioned, this is the vector due to gravity. 
 
-Variable name | Type | Purpose
+
+Variable name | Type | Units | Purpose
 ------------- | ----- | ----
-TimeBodyAccelerometerMeanX | numeric | Mean of mean accelerometer values in X direction of subject performing activity. Obtained by averaging in a signal window.
-TimeBodyAccelerometerMeanY | numeric | As above, in Y direction.
-TimeBodyAccelerometerMeanZ | numeric | As above, in Z direction.
-TimeBodyAccelerometerStandarddeviationX | numeric | Mean of mean accelerometer standard deviation values in X direction of subject performing activity.
-TimeBodyAccelerometerStandarddeviationY | numeric | As above, in Y direction.
-TimeBodyAccelerometerStandarddeviationZ | numeric | As above, in Z direction.
-TimeGravityAccelerometerMeanX | numeric | Mean of mean accelerometer values due to gravity of subject performing activity.
-TimeGravityAccelerometerMeanY | numeric | As above, in Y direction.
-TimeGravityAccelerometerMeanZ | numeric | As above, in Z direction.
-TimeGravityAccelerometerStandarddeviationX | numeric | Mean of standard deviation of acceleration due to gravity of subject performing activity | 
-TimeGravityAccelerometerStandarddeviationY | numeric | As above, in Y direction.
-TimeGravityAccelerometerStandarddeviationZ | numeric | As above, in Z direction.
-TimeBodyAccelerometerJerkMeanX | numeric | Mean of "jerk" (ie instantaneous acceleration along a different vector) in X direction of subject performing activity. Obtained by averaging in a signal window.
-TimeBodyAccelerometerJerkMeanY | numeric | As above, in Y direction.
-TimeBodyAccelerometerJerkMeanZ | numeric | As above, in Z direction.
-TimeBodyAccelerometerJerkStandarddeviationX | numeric | Mean of standard deviation of "jerk" (ie instantaneous acceleration along a different vector) in X direction of subject performing activity.
-TimeBodyAccelerometerJerkStandarddeviationY | numeric | As above, in Y direction.
-TimeBodyAccelerometerJerkStandarddeviationZ | numeric | As above, in Z direction.
-TimeBodyGyroscopeMeanX | numeric | Mean of mean gyroscope value in X direction of subject performing activity. Obtained by averaging in a signal window.
-TimeBodyGyroscopeMeanY | numeric | As above, in Y direction.
-TimeBodyGyroscopeMeanZ | numeric | As above, in Z direction.
-TimeBodyGyroscopeStandarddeviationX | numeric | Mean of standard deviation of gyroscope value in X direction of subject performing activity
-TimeBodyGyroscopeStandarddeviationY | numeric | As above, in Y direction.
-TimeBodyGyroscopeStandarddeviationZ | numeric | As above, in Z direction.
-TimeBodyGyroscopeJerkMeanX | numeric | Mean of mean "jerk" in X direction of subject performing activity. Obtained by averaging in a signal window.
-TimeBodyGyroscopeJerkMeanY | numeric | As above, in Y direction.
-TimeBodyGyroscopeJerkMeanZ | numeric | As above, in Z direction.
-TimeBodyGyroscopeJerkStandarddeviationX | numeric | Mean of standard deviation of "jerk" in X direction of subject performing activity.
-TimeBodyGyroscopeJerkStandarddeviationY | numeric | As above, in Y direction.
-TimeBodyGyroscopeJerkStandarddeviationZ | numeric | As above, in Z direction.
-TimeBodyAccelerometerMagnitudeMean | numeric | Mean of mean of magnitude of acceleration of body (calculated via Euclidean norm)
-TimeBodyAccelerometerMagnitudeStandarddeviation | numeric | Mean of standard deviation of magnitude of acceleration of body (calculated via Euclidean norm)
-TimeGravityAccelerometerMagnitudeMean | numeric | Mean of mean of magnitude of acceleration due to gravity (calculated via Euclidean norm)
-TimeGravityAccelerometerMagnitudeStandardeviation | numeric | Mean of standard deviation of magnitude of acceleration due to gravity (calculated via Euclidean norm)
-TimeBodyAccelerometerJerkMagnitudeMean | numeric | Mean of mean of magnitude of "jerk" of body (calculated via Euclidean norm)
-TimeBodyAccelerometerJerkMagnitudeStandarddeviation | numeric | Mean of standard deviation of magnitude of "jerk" of body (calculated via Euclidean norm)
-TimeBodyGyroscopeMagnitudeMean | numeric | Mean of mean of magnitude of gyroscope value (calculated via Euclidean norm) of body, subject performing activity
-TimeBodyGyroscopeMagnitudeStandarddeviation | numeric | Mean of standard deviation of magnitude of gyroscope value (calculated via Euclidean norm) of body, subject performing activity 
-TimeBodyGyroscopeJerkMagnitudeMean | numeric | Mean of mean of magnitude of "jerk" gyroscope value (calculated via Euclidean norm) of body, subject performing activity
-TimeBodyGyroscopeJerkMagnitudeStandarddeviation | numeric |  Mean of standard deviation of magnitude of "jerk" gyroscope value (calculated via Euclidean norm) of body, subject performing activity
-FrequencyBodyAccelerometerMeanX | numeric | Mean of mean of frequency domain acceleration in X direction
-FrequencyBodyAccelerometerMeanY | numeric | As above, in Y direction.
-FrequencyBodyAccelerometerMeanZ | numeric | As above, in Z direction.
-FrequencyBodyAccelerometerStandarddeviationX | numeric | Mean of standard deviation of frequency domain acceleration in X direction
-FrequencyBodyAccelerometerStandarddeviationY | numeric | As above, in Y direction.
-FrequencyBodyAccelerometerStandarddeviationZ | numeric | As above, in Z direction.
-FrequencyBodyAccelerometerMeanFrequencyX | numeric | Mean of mean frequency acceleration in X direction 
-FrequencyBodyAccelerometerMeanFrequencyY | numeric | As above, in Y direction.
-FrequencyBodyAccelerometerMeanFrequencyZ | numeric | As above, in Z direction.
-FrequencyBodyAccelerometerJerkMeanX | numeric | Mean of mean "jerk" acceleration in X direction
-FrequencyBodyAccelerometerJerkMeanY | numeric | As above, in Y direction.
-FrequencyBodyAccelerometerJerkMeanZ | numeric | As above, in Z direction.
-FrequencyBodyAccelerometerJerkStandarddeviationX | numeric | Mean of standard deviation of "jerk" in X direction, frequency domain.
-FrequencyBodyAccelerometerJerkStandarddeviationY | numeric | As above, in Y direction.
-FrequencyBodyAccelerometerJerkStandarddeviationZ | numeric | As above, in Z direction.
-FrequencyBodyAccelerometerJerkMeanFrequencyX | numeric | Mean of standard deviation of "jerk" frequency in X direction, frequency domain.
-FrequencyBodyAccelerometerJerkMeanFrequencyY | numeric | As above, in Y direction. 
-FrequencyBodyAccelerometerJerkMeanFrequencyZ | numeric | As above, in Z direction.
-FrequencyBodyGyroscopeMeanX | numeric | Mean of mean frequency-domain gyroscope value in X direction
-FrequencyBodyGyroscopeMeanY | numeric | As above, in Y direction.
-FrequencyBodyGyroscopeMeanZ | numeric | As above, in Z direction.
-FrequencyBodyGyroscopeStandarddeviationX | numeric | Mean of mean frequency-domain gyroscope standard deviation in X direction
-FrequencyBodyGyroscopeStandarddeviationY | numeric | As above, in Y direction.
-FrequencyBodyGyroscopeStandarddeviationZ | numeric | As above, in Z direction.
-FrequencyBodyGyroscopeMeanFrequencyX | numeric | Mean of mean frequency-domain gyroscope frequency value in X direction
-FrequencyBodyGyroscopeMeanFrequencyY | numeric | As above, in Y direction.
-FrequencyBodyGyroscopeMeanFrequencyZ | numeric | As above, in Z direction.
-FrequencyBodyAccelerometerMagnitudeMean | numeric | Mean of mean of frequency-domain value of accelerometer magnitude (this being calculated via Euclidean norm)
-FrequencyBodyAccelerometerMagnitudeStandarddeviation | numeric |  Mean of mean of frequency-domain value of accelerometer standard deviation (this being calculated via Euclidean norm)
-FrequencyBodyAccelerometerMagnitudeMeanFrequency | numeric | Mean of mean of frequency-domain value of accelerometer frequency
-FrequencyBodyAccelerometerJerkMagnitudeMean | numeric | Mean of mean frequency-domain value of accelerometer jerk  magnitude 
-FrequencyBodyAccelerometerJerkMagnitudeStandarddeviation | numeric | Mean of mean frequency-domain value of accelerometer jerk standard deviation
-FrequencyBodyAccelerometerJerkMagnitudeMeanFrequency | numeric | Mean of mean frequency-domain value of accelerometer jerk magnitude frequency
-FrequencyBodyGyroscopeMagnitudeMean | numeric | Mean of mean frequency-domain value of gyroscope magnitude 
-FrequencyBodyGyroscopeMagnitudeStandarddeviation | numeric |  Mean of mean frequency-domain value of gyroscope standard deviation
-FrequencyBodyGyroscopeMagnitudeMeanFrequency | numeric | Mean of mean frequency-domain value of gyroscope mean frequency magnitude 
-FrequencyBodyGyroscopeJerkMagnitudeMean | numeric |  Mean of mean frequency-domain value of gyroscope jerk magnitude 
-FrequencyBodyGyroscopeJerkMagnitudeStandarddeviation | numeric | Mean of mean frequency-domain value of gyroscope jerk magnitude standard deviation
-FrequencyBodyGyroscopeJerkMagnitudeMeanFrequency | numeric | Mean of mean frequency-domain value of gyroscope jerk magnitude mean frequency
-AngleTimeBodyAccelerometerMeanGravitY | numeric | Mean of angle between body acceleration and gravity, obtained by averaging in a signal window.
-AngleTimeBodyAccelerometerJerkMeanGravityMean | numeric | Mean of angle between body "jerk"  and gravity, obtained by averaging in a signal window.
-AngleTimeBodyGyroscopeMeanGravityMean | numeric | Mean of angle bewtwen body "mean" gyroscope value and gravity, obtained by averaging in a signal window.  
-AngleTimeBodyGyroscopeJerkMeanGravityMean  | numeric | Mean of angle between  body "mean" gyroscope "jerk" value and  gravity, obtained by averaging in a signal window.  
-AngleXGravityMean | numeric | Mean of mean angle between X vector and gravity,  obtained by averaging in a signal window.  
-AngleYGravityMean | numeric | As above, in Y direction.
-AngleZGravityMean | numeric | As above, in Z direction.
-Activity | character | name of activity performed. Range is "walking", walkingupstairs", "walkingdownstairs", "sitting","standing", "laying"
-Subject | integer | Variable containing ID of subject peforming activity. Range is 1 .. 30 inclusive.
+TimeBodyAccelerometerMeanX | numeric | m/s^2 | Mean of mean accelerometer values in X direction of subject performing activity. Obtained by averaging in a signal window.
+TimeBodyAccelerometerMeanY | numeric | m/s^2 | As above, in Y direction.
+TimeBodyAccelerometerMeanZ | numeric | m/s^2 | As above, in Z direction.
+TimeBodyAccelerometerStandarddeviationX | numeric | n/a | Mean of mean accelerometer standard deviation values in X direction of subject performing activity.
+TimeBodyAccelerometerStandarddeviationY | numeric | n/a | As above, in Y direction.
+TimeBodyAccelerometerStandarddeviationZ | numeric | n/a | As above, in Z direction.
+TimeGravityAccelerometerMeanX | numeric | m/s^2 | Mean of mean accelerometer values due to gravity of subject performing activity.
+TimeGravityAccelerometerMeanY | numeric | m/s^2 | As above, in Y direction.
+TimeGravityAccelerometerMeanZ | numeric | m/s^2 | As above, in Z direction.
+TimeGravityAccelerometerStandarddeviationX | numeric | n/a | Mean of standard deviation of acceleration due to gravity of subject performing activity | 
+TimeGravityAccelerometerStandarddeviationY | numeric | n/a | As above, in Y direction.
+TimeGravityAccelerometerStandarddeviationZ | numeric | n/a | As above, in Z direction.
+TimeBodyAccelerometerJerkMeanX | numeric | m/s^2 | Mean of "jerk" (ie instantaneous acceleration along a different vector) in X direction of subject performing activity. Obtained by averaging in a signal window.
+TimeBodyAccelerometerJerkMeanY | numeric | m/s^2 | As above, in Y direction.
+TimeBodyAccelerometerJerkMeanZ | numeric | m/s^2 | As above, in Z direction.
+TimeBodyAccelerometerJerkStandarddeviationX | numeric | n/a | Mean of standard deviation of "jerk" (ie instantaneous acceleration along a different vector) in X direction of subject performing activity.
+TimeBodyAccelerometerJerkStandarddeviationY | numeric | n/a | As above, in Y direction.
+TimeBodyAccelerometerJerkStandarddeviationZ | numeric | n/a | As above, in Z direction.
+TimeBodyGyroscopeMeanX | numeric | n/a | Mean of mean gyroscope value in X direction of subject performing activity. Obtained by averaging in a signal window.
+TimeBodyGyroscopeMeanY | numeric | n/a | As above, in Y direction.
+TimeBodyGyroscopeMeanZ | numeric | n/a | As above, in Z direction.
+TimeBodyGyroscopeStandarddeviationX | numeric | n/a | Mean of standard deviation of gyroscope value in X direction of subject performing activity
+TimeBodyGyroscopeStandarddeviationY | numeric | n/a | As above, in Y direction.
+TimeBodyGyroscopeStandarddeviationZ | numeric | n/a | As above, in Z direction.
+TimeBodyGyroscopeJerkMeanX | numeric | m/s^2 | Mean of mean "jerk" in X direction of subject performing activity. Obtained by averaging in a signal window.
+TimeBodyGyroscopeJerkMeanY | numeric | m/s^2 | As above, in Y direction.
+TimeBodyGyroscopeJerkMeanZ | numeric | m/s^2 | As above, in Z direction.
+TimeBodyGyroscopeJerkStandarddeviationX | numeric | n/a | Mean of standard deviation of "jerk" in X direction of subject performing activity.
+TimeBodyGyroscopeJerkStandarddeviationY | numeric | n/a | As above, in Y direction.
+TimeBodyGyroscopeJerkStandarddeviationZ | numeric | n/a | As above, in Z direction.
+TimeBodyAccelerometerMagnitudeMean | numeric | m/s^2 | Mean of mean of magnitude of acceleration of body (calculated via Euclidean norm)
+TimeBodyAccelerometerMagnitudeStandarddeviation | numeric | m/s^2 | Mean of standard deviation of magnitude of acceleration of body (calculated via Euclidean norm)
+TimeGravityAccelerometerMagnitudeMean | numeric | m/s^2 | Mean of mean of magnitude of acceleration due to gravity (calculated via Euclidean norm)
+TimeGravityAccelerometerMagnitudeStandardeviation | numeric | n/a |Mean of standard deviation of magnitude of acceleration due to gravity (calculated via Euclidean norm)
+TimeBodyAccelerometerJerkMagnitudeMean | numeric | m/s^2 | Mean of mean of magnitude of "jerk" of body (calculated via Euclidean norm)
+TimeBodyAccelerometerJerkMagnitudeStandarddeviation | numeric | n/a | Mean of standard deviation of magnitude of "jerk" of body (calculated via Euclidean norm)
+TimeBodyGyroscopeMagnitudeMean | numeric | m/s^2 | Mean of mean of magnitude of gyroscope value (calculated via Euclidean norm) of body, subject performing activity
+TimeBodyGyroscopeMagnitudeStandarddeviation | numeric | n/a |Mean of standard deviation of magnitude of gyroscope value (calculated via Euclidean norm) of body, subject performing activity 
+TimeBodyGyroscopeJerkMagnitudeMean | numeric | n/a | Mean of mean of magnitude of "jerk" gyroscope value (calculated via Euclidean norm) of body, subject performing activity
+TimeBodyGyroscopeJerkMagnitudeStandarddeviation | numeric |  n/a | Mean of standard deviation of magnitude of "jerk" gyroscope value (calculated via Euclidean norm) of body, subject performing activity
+FrequencyBodyAccelerometerMeanX | numeric | n/a | Mean of mean of frequency domain acceleration in X direction
+FrequencyBodyAccelerometerMeanY | numeric | n/a | As above, in Y direction.
+FrequencyBodyAccelerometerMeanZ | numeric | n/a | As above, in Z direction.
+FrequencyBodyAccelerometerStandarddeviationX | numeric | n/a | Mean of standard deviation of frequency domain acceleration in X direction
+FrequencyBodyAccelerometerStandarddeviationY | numeric | n/a | As above, in Y direction.
+FrequencyBodyAccelerometerStandarddeviationZ | numeric | n/a | As above, in Z direction.
+FrequencyBodyAccelerometerMeanFrequencyX | numeric | n/a | Mean of mean frequency acceleration in X direction 
+FrequencyBodyAccelerometerMeanFrequencyY | numeric | n/a | As above, in Y direction.
+FrequencyBodyAccelerometerMeanFrequencyZ | numeric | n/a | As above, in Z direction.
+FrequencyBodyAccelerometerJerkMeanX | numeric | n/a | Mean of mean "jerk" acceleration in X direction
+FrequencyBodyAccelerometerJerkMeanY | numeric | n/a | As above, in Y direction.
+FrequencyBodyAccelerometerJerkMeanZ | numeric | n/a | As above, in Z direction.
+FrequencyBodyAccelerometerJerkStandarddeviationX | numeric | n/a | Mean of standard deviation of "jerk" in X direction, frequency domain.
+FrequencyBodyAccelerometerJerkStandarddeviationY | numeric | n/a | As above, in Y direction.
+FrequencyBodyAccelerometerJerkStandarddeviationZ | numeric | n/a | As above, in Z direction.
+FrequencyBodyAccelerometerJerkMeanFrequencyX | numeric | n/a | Mean of standard deviation of "jerk" frequency in X direction, frequency domain.
+FrequencyBodyAccelerometerJerkMeanFrequencyY | numeric | n/a | As above, in Y direction. 
+FrequencyBodyAccelerometerJerkMeanFrequencyZ | numeric | n/a | As above, in Z direction.
+FrequencyBodyGyroscopeMeanX | numeric | n/a | Mean of mean frequency-domain gyroscope value in X direction
+FrequencyBodyGyroscopeMeanY | numeric | n/a | As above, in Y direction.
+FrequencyBodyGyroscopeMeanZ | numeric | n/a | As above, in Z direction.
+FrequencyBodyGyroscopeStandarddeviationX | numeric | n/a | Mean of mean frequency-domain gyroscope standard deviation in X direction
+FrequencyBodyGyroscopeStandarddeviationY | numeric | n/a | As above, in Y direction.
+FrequencyBodyGyroscopeStandarddeviationZ | numeric | n/a | As above, in Z direction.
+FrequencyBodyGyroscopeMeanFrequencyX | numeric | n/a | Mean of mean frequency-domain gyroscope frequency value in X direction
+FrequencyBodyGyroscopeMeanFrequencyY | numeric | n/a | As above, in Y direction.
+FrequencyBodyGyroscopeMeanFrequencyZ | numeric | n/a | As above, in Z direction.
+FrequencyBodyAccelerometerMagnitudeMean | numeric | n/a | Mean of mean of frequency-domain value of accelerometer magnitude (this being calculated via Euclidean norm)
+FrequencyBodyAccelerometerMagnitudeStandarddeviation | numeric |  n/a | Mean of mean of frequency-domain value of accelerometer standard deviation (this being calculated via Euclidean norm)
+FrequencyBodyAccelerometerMagnitudeMeanFrequency | numeric | n/a | Mean of mean of frequency-domain value of accelerometer frequency
+FrequencyBodyAccelerometerJerkMagnitudeMean | numeric | n/a | Mean of mean frequency-domain value of accelerometer jerk  magnitude 
+FrequencyBodyAccelerometerJerkMagnitudeStandarddeviation | numeric | n/a | Mean of mean frequency-domain value of accelerometer jerk standard deviation
+FrequencyBodyAccelerometerJerkMagnitudeMeanFrequency | numeric | n/a | Mean of mean frequency-domain value of accelerometer jerk magnitude frequency
+FrequencyBodyGyroscopeMagnitudeMean | numeric | n/a | Mean of mean frequency-domain value of gyroscope magnitude 
+FrequencyBodyGyroscopeMagnitudeStandarddeviation | numeric |  n/a | Mean of mean frequency-domain value of gyroscope standard deviation
+FrequencyBodyGyroscopeMagnitudeMeanFrequency | numeric | n/a | Mean of mean frequency-domain value of gyroscope mean frequency magnitude 
+FrequencyBodyGyroscopeJerkMagnitudeMean | numeric |  n/a | Mean of mean frequency-domain value of gyroscope jerk magnitude 
+FrequencyBodyGyroscopeJerkMagnitudeStandarddeviation | numeric | n/a | Mean of mean frequency-domain value of gyroscope jerk magnitude standard deviation
+FrequencyBodyGyroscopeJerkMagnitudeMeanFrequency | numeric | n/a | Mean of mean frequency-domain value of gyroscope jerk magnitude mean frequency
+AngleTimeBodyAccelerometerMeanGravitY | numeric | radians | Mean of angle between body acceleration and gravity, obtained by averaging in a signal window.
+AngleTimeBodyAccelerometerJerkMeanGravityMean | numeric | radians | Mean of angle between body "jerk"  and gravity, obtained by averaging in a signal window.
+AngleTimeBodyGyroscopeMeanGravityMean | numeric | radians | Mean of angle bewteen body "mean" gyroscope value and gravity, obtained by averaging in a signal window.  
+AngleTimeBodyGyroscopeJerkMeanGravityMean  | numeric | radians | Mean of angle between  body "mean" gyroscope "jerk" value and  gravity, obtained by averaging in a signal window.  
+AngleXGravityMean | numeric | radians | Mean of mean angle between X vector and gravity,  obtained by averaging in a signal window.  
+AngleYGravityMean | numeric | radians | As above, in Y direction.
+AngleZGravityMean | numeric | radians | As above, in Z direction.
+Activity | character | n/a|  name of activity performed. Range is "walking", walkingupstairs", "walkingdownstairs", "sitting","standing", "laying"
+Subject | integer | n/a | Variable containing ID of subject peforming activity. Range is 1 .. 30 inclusive.
 
 -----
 #Original features_info.txt
